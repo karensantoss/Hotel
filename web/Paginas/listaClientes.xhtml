@@ -1,0 +1,64 @@
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="../WEB-INF/template/template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:define name="conteudo">
+        <h:form acceptcharset="ISO-8859-1">
+            <h:dataTable value="#{clienteMB.clientes}" var="cliente"  styleClass="tabela" headerClass="cabecalho">
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Código"/>
+                    </f:facet>
+                    <h:outputText value="#{cliente.codigo}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nome"/>
+                    </f:facet>
+                    <h:outputText value="#{cliente.nome}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Data de Nascimento"/>
+                    </f:facet>
+                    <h:outputText value="#{cliente.dataNascimento}" >
+                        
+                        <f:convertDateTime pattern="dd/MM/yyyy" type="date" timeZone="Brazil/East"/>
+                    
+                    </h:outputText>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Cidade"/>
+                    </f:facet>
+                    <h:outputText value="#{cliente.cidade.nome}"/>
+                </h:column>
+                
+                
+                <h:column>
+                    <f:facet name="header">
+                        <h:commandLink action="/faces/Paginas/Cliente.xhtml">
+                        <h:graphicImage library="imagens" name="add.png"/>
+                    </h:commandLink>
+                    </f:facet>
+                    
+                    <h:commandLink action="#{clienteMB.preparaAlteracao}">
+                        <h:graphicImage library="imagens" name="edit.png"/>
+                        <f:setPropertyActionListener value="#{cliente}" target="#{clienteMB.cliente}"/>
+                    </h:commandLink>
+                    
+                   
+                    <h:commandLink action="#{clienteMB.remove()}">
+                        <h:graphicImage library="imagens" name="delete.png"/>
+                        <f:setPropertyActionListener value="#{cliente}" target="#{clienteMB.cliente}"/>
+                    </h:commandLink>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>

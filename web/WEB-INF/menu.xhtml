@@ -1,0 +1,24 @@
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html">
+    <h:form>
+        <ul>
+            <li>
+                <h2>Cadastros</h2>
+                <ul>
+                    <li><h:commandLink value="Cliente" action="/faces/Paginas/Cliente.xhtml"/></li>
+                    <li><h:commandLink value="Cidade" action="/faces/Paginas/Cidade.xhtml"/></li>
+                    <li><h:commandLink value="Quarto" action="/faces/Paginas/Quarto.xhtml"/></li>
+                </ul>
+            </li>
+            
+            <li>
+                <h2>Listagens</h2>
+                <ul>
+                    <li><h:commandLink value="Cliente" action="/faces/Paginas/listaClientes.xhtml"/></li>
+                    <li><h:commandLink value="Cidade" action="/faces/Paginas/listaCidade.xhtml"/></li>
+                    <li><h:commandLink value="Quarto" action="/faces/Paginas/listaQuarto.xhtml"/></li>
+                </ul>
+            </li>
+    </h:form>
+</ui:composition>
