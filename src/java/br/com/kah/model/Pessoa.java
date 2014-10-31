@@ -28,6 +28,10 @@ public abstract class Pessoa implements Serializable{
     @OneToOne (cascade = CascadeType.ALL)
     private Endereco endereco;
 
+    public Pessoa() {
+        Endereco e = new Endereco();
+    }
+
     public int getCodigo() {
         return codigo;
     }

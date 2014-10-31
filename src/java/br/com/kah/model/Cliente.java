@@ -8,7 +8,12 @@ public class Cliente extends PessoaFisica implements Serializable{
     
     private String profissao;
     private String passaporte;
+   
 
+    public Cliente() {
+        Endereco end = new Endereco();
+    }
+    
     public String getProfissao() {
         return profissao;
     }

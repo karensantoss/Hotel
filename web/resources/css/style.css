@@ -8,7 +8,7 @@ body{
 
 body input,textarea,select,option{
     font-family: Arial, Helvetica, sans-serif;
-    color: #83826A;
+    color: #000000;
     font-size: 12px;
 }
 
@@ -58,7 +58,7 @@ a{
 
 #pagina{
     width: 920px;
-    height: 600px;
+    height: 750px;
     margin: 0 auto;
     background-color: #FFFFFF;
     border-radius: 10px;
