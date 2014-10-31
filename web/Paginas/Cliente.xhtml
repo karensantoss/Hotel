@@ -34,14 +34,7 @@
                                  a data de nascimento do cliente" converterMessage="Data no formato inválido. Utilize dd/MM/aaaay">
                         <f:convertDateTime pattern="dd/MM/yyyy" type="date"/>
                     </h:inputText>
-                    
-                    <br />
-                  
-                    <h:outputLabel value="Cidade:   " for="cidade"/>
-                    <h:selectOneMenu id="cidade" value="#{clienteMB.cidadeId}" required="true" requiredMessage="É necessário
-                                     o cidade do cliente">
-                        <f:selectItems value="#{cidadeMB.cidade}" var="cidade"  itemLabel="#{cidade.nome}" itemValue="#{cidade.codigo}"/>
-                    </h:selectOneMenu>
+
                     
                     <br />
                   
@@ -113,9 +106,12 @@
                  
                  <h:outputLabel value="Cep:  " for="cep"/>
                  <h:inputText id="cep" value="#{clienteMB.cliente.endereco.cep}"/>
-            
-                 <h:outputLabel value="Cidade:  " for="cidade"/>
-                 <h:inputText id="cidade" value="#{clienteMB.cliente.endereco.cidade}"/>
+                 
+                    <h:outputLabel value="Cidade:   " for="cidade"/>
+                    <h:selectOneMenu id="cidades" value="#{clienteMB.cidadeId}" required="true" requiredMessage="É necessário
+                                     o cidade do cliente">
+                        <f:selectItems value="#{cidadeMB.cidades}" var="cidade"  itemLabel="#{cidade.nome}" itemValue="#{cidade.codigo}"/>
+                    </h:selectOneMenu>
                  
                  <h:outputLabel value="Pais:  " for="pais"/>
                  <h:inputText id="pais" value="#{clienteMB.cliente.endereco.pais}"/>

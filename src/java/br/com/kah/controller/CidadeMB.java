@@ -13,7 +13,7 @@ import javax.persistence.EntityManager;
 import javax.servlet.http.HttpServletRequest;
 
 @ManagedBean
-public class CidadeMB  {
+public class CidadeMB implements Serializable{
     
     private Cidade cidade;
     private List<Cidade> cidades;
