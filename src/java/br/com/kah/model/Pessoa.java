@@ -29,7 +29,7 @@ public abstract class Pessoa implements Serializable{
     private Endereco endereco;
 
     public Pessoa() {
-        Endereco e = new Endereco();
+         endereco = new Endereco();
     }
 
     public int getCodigo() {
