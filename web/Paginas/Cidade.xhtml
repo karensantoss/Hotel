@@ -12,7 +12,10 @@
                     <h:outputLabel value="Nome: " for="nome"/>
                     <h:inputText id="nome" value="#{cidadeMB.cidade.nome}" required="true" requiredMessage="É necessário
                                  um nome para a cidade"/>
-            <br />
+           
+                </h:panelGrid>
+            </fieldset>
+                    <br />
             
             <h:panelGroup>
                 <h:commandButton value="Salvar" action="#{cidadeMB.insere}" styleClass="botao"/>

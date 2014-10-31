@@ -38,7 +38,7 @@
                     <br />
                   
                     <h:outputLabel value="Cidade:   " for="cidade"/>
-                    <h:selectOneMenu id="cidade" value="#{cidadeMB.cidadeId}" required="true" requiredMessage="É necessário
+                    <h:selectOneMenu id="cidade" value="#{clienteMB.cidadeId}" required="true" requiredMessage="É necessário
                                      o cidade do cliente">
                         <f:selectItems value="#{cidadeMB.cidade}" var="cidade"  itemLabel="#{cidade.nome}" itemValue="#{cidade.codigo}"/>
                     </h:selectOneMenu>
