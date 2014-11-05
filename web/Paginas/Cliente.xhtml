@@ -61,6 +61,7 @@
                     <h:outputLabel value="Telefone Comercial: " for="comercial"/>
                     <h:inputText id="comercial" value="#{clienteMB.cliente.comercial}"/>
                     
+                    
                     <br />
                   
                     <h:outputLabel value="Telefone Residencial: " for="residencial"/>
@@ -112,6 +113,7 @@
                                    o cidade do cliente">
                   <f:selectItems value="#{cidadeMB.cidades}" var="cidade"  itemLabel="#{cidade.nome}" itemValue="#{cidade.codigo}"/>
                 </h:selectOneMenu>
+   
                  
                  <h:outputLabel value="Pais:  " for="pais"/>
                  <h:inputText id="pais" value="#{clienteMB.cliente.endereco.pais}"/>
